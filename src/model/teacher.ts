@@ -5,7 +5,8 @@ import { TitleEnum } from "../util/util";
 
 const TeacherMember: Schema<ITeacherDocument> = new Schema(
   {
-    salary: { type: String, required: true, trim: true },
+    salary: { type: Number, trim: true },
+    code: { type: String, trim: true },
     title: { type: String, enum: TitleEnum, required: true, trim: true },
   },
   { timestamps: true }

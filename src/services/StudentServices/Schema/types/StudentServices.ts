@@ -5,31 +5,32 @@ export const StudentServicesTypes = gql`
     name: String
     surname: String
     dob: String
-    number: Int
-    nin: String
+    number: String
+    nin: Int
     createdAt: DateTime
     updatedAt: DateTime
   }
 
   input StudentInput {
-    nin: String
+    nin: Int
     name: String
     surname: String
     dob: String
-    number: Int
+    number: String
   }
 
   input UpdateStudentInput {
     name: String
     surname: String
     dob: String
-    number: Int
+    number: String
+    salary: String
   }
 
   input StudentLoginInput {
     name: String
     surname: String
-    nin: String
+    nin: Int
   }
 
   type addStudentResponse {

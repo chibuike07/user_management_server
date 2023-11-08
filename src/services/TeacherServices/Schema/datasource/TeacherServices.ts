@@ -9,7 +9,7 @@ import { Teacher } from "../../../../model/teacher";
 
 export const TeacherServicesDatasources = {
   addTeacher: async (
-    data: IAddTeacher["TeacherInput"]
+    data: IAddTeacher["teacherInput"]
   ): Promise<
     | Error
     | ValidationError
@@ -25,18 +25,18 @@ export const TeacherServicesDatasources = {
       .split("")
       .sort(() => 0.5 - Math.random())
       .join("");
-    console.log("randomString", randomString);
 
     try {
       await Teacher.create({
         surname,
         name,
         code: `${name.substring(0, 3)}_${randomString.substring(0, 3)}`,
-        role: Role[2],
+        role: Role[1],
         dob,
         number,
         salary,
         title,
+        nin,
       });
 
       return { message: "teacher created successfully" };

@@ -8,6 +8,7 @@ const CoreUsersModal: Schema<ICoreUsersDocument> = new Schema(
     surname: { type: String, required: true, trim: true },
     nin: { type: Number, required: true, trim: true, unique: true },
     dob: { type: String, required: true },
+    number: { type: String, required: true },
     role: {
       type: String,
       enum: Role,

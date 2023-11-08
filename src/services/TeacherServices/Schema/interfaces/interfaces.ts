@@ -4,7 +4,7 @@ import { ICustomRequest } from "../../../../Interfaces/authentication";
 import { TitleEnum } from "../../../../util/util";
 
 export interface IAddTeacher {
-  TeacherInput: {
+  teacherInput: {
     nin: string;
     title: TitleEnum;
     name: string;
@@ -29,7 +29,7 @@ export interface ITeacherServiceContext {
     TeacherServicesDatasources: {
       getTeachers: () => unknown[];
       getTeacher: (req: AnyObject) => AnyObject;
-      addTeacher: (data: IAddTeacher["TeacherInput"]) => AnyObject;
+      addTeacher: (data: IAddTeacher["teacherInput"]) => AnyObject;
       loginTeacher: (
         data: IAddTeacher["loginTeacherInput"],
         res: unknown

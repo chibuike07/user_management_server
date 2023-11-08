@@ -4,7 +4,7 @@ export interface IStudentDocument extends mongoose.Document {
 }
 export interface ITeacherDocument extends mongoose.Document {
   title: string;
-  salary: string;
+  salary?: number;
   code: string;
 }
 

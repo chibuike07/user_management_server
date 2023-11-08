@@ -34,20 +34,19 @@ export const TeacherQueryResolvers = {
 export const TeacherMutationResolvers = {
   addTeacher: async (
     _: null,
-    { TeacherInput: executiveInput }: IAddTeacher,
+    { teacherInput }: IAddTeacher,
     { datasource }: ITeacherServiceContext
   ) => {
-    const { TeacherServicesDatasources: ExecutiveServicesDatasources } =
-      datasource;
-    return ExecutiveServicesDatasources.addTeacher(executiveInput);
+    const { TeacherServicesDatasources } = datasource;
+    return TeacherServicesDatasources.addTeacher(teacherInput);
   },
 
   loginTeacher: async (
     _: null,
-    { loginTeacherInput: loginUserInput }: IAddTeacher,
+    { loginTeacherInput }: IAddTeacher,
     { datasource, res }: ITeacherServiceContext
   ) => {
     const { TeacherServicesDatasources } = datasource;
-    return TeacherServicesDatasources.loginTeacher(loginUserInput, { res });
+    return TeacherServicesDatasources.loginTeacher(loginTeacherInput, { res });
   },
 };

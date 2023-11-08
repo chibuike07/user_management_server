@@ -13,13 +13,14 @@ export const TeacherServicesTypes = gql`
     updatedAt: DateTime
   }
 
-  input TeahcerInput {
+  input TeacherInput {
     name: String
     surname: String
-    role: String
-    code: String
-    salary: String
+    nin: Int
+    salary: Int
     title: String
+    dob: String
+    number: String
   }
 
   input TeacherLoginInput {
@@ -38,7 +39,7 @@ export const TeacherServicesTypes = gql`
   }
 
   type Mutation {
-    addTeacher(TeacherInput: TeacherLoginInput): addTeacherResponse!
+    addTeacher(teacherInput: TeacherInput): addTeacherResponse!
     loginTeacher(loginTeacherInput: TeacherLoginInput): String!
   }
 `;
