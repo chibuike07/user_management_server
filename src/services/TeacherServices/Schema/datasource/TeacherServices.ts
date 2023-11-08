@@ -84,7 +84,7 @@ export const TeacherServicesDatasources = {
       createdAt: -1,
     });
 
-    if (!findTeacher) return new Error("No user found");
+    if (!findTeacher) return new Error("No teacher found");
     return findTeacher;
   },
 };

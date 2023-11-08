@@ -73,21 +73,12 @@ export const StudentServicesDatasources = {
         message: string;
       }
   > => {
-<<<<<<< HEAD
     const findStudent = await Student.findByIdAndUpdate(id, updateStudent, {
-=======
-    const findUsers = await Student.findById(id, updateStudent, {
->>>>>>> e36bcf117096afa6873c92f1223e75afcb18e10c
       omitUpdefined: true,
       new: true,
     });
 
-<<<<<<< HEAD
     if (!findStudent) return new Error("No student found");
-=======
-    if (!findUsers) return new Error("No student found");
-
->>>>>>> e36bcf117096afa6873c92f1223e75afcb18e10c
     return { message: "Student updated successfully" };
   },
 

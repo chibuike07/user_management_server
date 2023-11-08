@@ -13,7 +13,6 @@ export const TeacherServicesTypes = gql`
     updatedAt: DateTime
   }
 
-<<<<<<< HEAD
   input TeacherInput {
     name: String
     surname: String
@@ -22,15 +21,6 @@ export const TeacherServicesTypes = gql`
     title: String
     dob: String
     number: String
-=======
-  input TeahcerInput {
-    name: String
-    surname: String
-    role: String
-    code: String
-    salary: String
-    title: String
->>>>>>> e36bcf117096afa6873c92f1223e75afcb18e10c
   }
 
   input TeacherLoginInput {
@@ -49,11 +39,7 @@ export const TeacherServicesTypes = gql`
   }
 
   type Mutation {
-<<<<<<< HEAD
     addTeacher(teacherInput: TeacherInput): addTeacherResponse!
-=======
-    addTeacher(TeacherInput: TeacherLoginInput): addTeacherResponse!
->>>>>>> e36bcf117096afa6873c92f1223e75afcb18e10c
     loginTeacher(loginTeacherInput: TeacherLoginInput): String!
   }
 `;
