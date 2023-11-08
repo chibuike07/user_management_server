@@ -1,0 +1,43 @@
+{
+  "name": "user_registration_server",
+  "version": "1.0.0",
+  "description": "A user management server",
+  "main": "server.ts",
+  "author": "Chibuike Princewill Chime",
+  "license": "ISC",
+  "scripts": {
+    "start": "tsc && nodemon dist/server.js",
+    "dev": "nodemon server.ts",
+    "lint": "eslint . --ext .ts"
+  },
+  "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.16",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "apollo-server": "^3.12.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.53.0",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.3.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "express": "^4.18.2",
+    "graphql": "^16.8.1",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-type-json": "^0.3.2",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.6",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
+  }
+}
